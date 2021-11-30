@@ -8,4 +8,4 @@ spending_categories = []
         spending_categories.append(expense.category)
 
 spending_counter = collections.Counter(spending_categories)
-prind(spending_counter)
+print(spending_counter)
