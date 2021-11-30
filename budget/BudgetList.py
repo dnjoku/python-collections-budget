@@ -8,3 +8,5 @@ class BudgetList():
         self.overages = []
 
     #def append(self, item):
+    # implement append so that it only appends to self if total < budget
+    def append(self, item):    
