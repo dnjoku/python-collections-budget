@@ -8,4 +8,4 @@ spending_categories = []
         spending_categories.append(expense.category)
 
 spending_counter = collections.Counter(spending_categories)
-print(spending_counter)
+top5 = spending_counter.most_common(5)
