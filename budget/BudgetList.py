@@ -50,7 +50,7 @@ def main():
 # Test len()
     print('The count of all expenses: ' + str(len(myBudgetList)))
 
-    for entry in BudgetList:
+    for entry in myBudgetList:
         print(entry)
 
     fig,ax=plt.subplots()
