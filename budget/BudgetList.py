@@ -22,6 +22,20 @@ class BudgetList():
     def __len__(self):
         return (len(self.expenses) + len(self.overages))
 
+    def __iter__(self):
+        self.iter_e = iter(self.expenses)
+        self.iter_o = iter(self.overages)
+        return self
+
+    # Iterate first over the expenses iterator until it runs out, then switch to
+    # the overages iterator. When it fails, it will return StopIteration to the caller.
+    def __next__(self):
+        try:
+            return self.iter_e.__next__()
+        except StopIteration as stop:
+            return self.iter_o.__next__()
+
+
 def main():
 # Using above class
 # Set starting budget to 500
